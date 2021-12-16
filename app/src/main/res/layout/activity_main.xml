@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:ems="20"
-        android:hint="位置查詢"
+        android:hint="名稱、地址搜尋"
         android:textColor="@color/white"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/tvSearch"
