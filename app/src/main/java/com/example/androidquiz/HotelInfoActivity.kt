@@ -2,7 +2,10 @@ package com.example.androidquiz
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
+import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.example.androidquiz.databinding.ActivityHotelInfoBinding
@@ -44,9 +47,20 @@ class HotelInfoActivity : AppCompatActivity() {
     private fun init() {
         binding.tvName.text = data.name
         binding.tvAddress.text = data.vicinity
-        binding.tvStar.text = "${data.star}"
-        binding.tvLandscapeNumber.text = "景觀圖(${data.landscape.size})"
 
+        binding.llStar.removeAllViews()
+        for (i in 0 until data.star) {
+            val img = ImageView(this)
+            img.setImageResource(R.drawable.star)
+
+            val llParams = LinearLayout.LayoutParams(120, 120)
+            llParams.gravity = Gravity.CENTER
+            img.layoutParams = llParams
+
+            binding.llStar.addView(img)
+        }
+
+        binding.tvLandscapeNumber.text = "景觀圖(${data.landscape.size})"
 
         Glide.with(this).load(data.photo).into(binding.imgPhoto)
     }

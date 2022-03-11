@@ -80,52 +80,37 @@
         android:id="@+id/tvAddress"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="地址"
         android:textColor="@color/black"
-        android:textSize="22dp"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="@+id/tvName"
         app:layout_constraintStart_toStartOf="@+id/tvName"
         app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/star"
-        app:layout_constraintEnd_toStartOf="@+id/tvStar"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="@+id/tvAddress"
-        app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
-
-    <TextView
-        android:id="@+id/tvStar"
+    <LinearLayout
+        android:id="@+id/llStar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="5.0"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/tvAddress"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintStart_toStartOf="@+id/tvAddress"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
 
     <TextView
         android:id="@+id/tvLandscapeNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="景觀圖"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvStar" />
+        app:layout_constraintTop_toBottomOf="@+id/llStar" />
 
     <GridView
         android:id="@+id/gvPicture"
